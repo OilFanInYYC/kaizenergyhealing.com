@@ -54,6 +54,12 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         }
     })
+
+    // Open Booking URL
+    var bookingType = getElementById('bookingtype');
+    bookingType.addEventListener('change', () => {
+        console.log(this);
+    });
 })
 
 function fadeOut(el) {
