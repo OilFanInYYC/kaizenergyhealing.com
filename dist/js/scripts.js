@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', event => {
     // Open Booking URL
     var bookingType = document.getElementById('bookingtype');
     bookingType.addEventListener('change', () => {
-        console.log(this.value);
+        console.log(this);
     });
 
     function _toggleMenuIcon() {
