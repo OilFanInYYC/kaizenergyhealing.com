@@ -26,6 +26,12 @@ window.addEventListener('DOMContentLoaded', event => {
         })
     });
 
+    // Open Booking URL
+    var bookingType = getElementById('bookingtype');
+    bookingType.addEventListener('change', () => {
+        console.log(this.value);
+    });
+
     function _toggleMenuIcon() {
         const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
         const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-xmark');
@@ -54,12 +60,6 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         }
     })
-
-    // Open Booking URL
-    var bookingType = getElementById('bookingtype');
-    bookingType.addEventListener('change', () => {
-        console.log(this);
-    });
 })
 
 function fadeOut(el) {
