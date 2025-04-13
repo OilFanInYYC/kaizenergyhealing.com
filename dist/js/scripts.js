@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     // Open Booking URL
-    var bookingType = getElementById('bookingtype');
+    var bookingType = document.getElementById('bookingtype');
     bookingType.addEventListener('change', () => {
         console.log(this.value);
     });
