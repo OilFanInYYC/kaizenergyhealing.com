@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     var bookingType = document.getElementById('bookingtype');
     bookingType.addEventListener('change', function (e) {
-        console.log(e);
+        console.log(e.options);
     });
 
     function _toggleMenuIcon() {
