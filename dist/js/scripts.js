@@ -26,6 +26,13 @@ window.addEventListener('DOMContentLoaded', event => {
         })
     });
 
+    $('bookingtype').on('change', function() {
+        var url = $(this).val();
+        if(url) {
+            window.location = url;
+        }
+        return false;
+    });
 
     function _toggleMenuIcon() {
         const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
@@ -79,13 +86,3 @@ function fadeIn(el, display) {
         }
     })();
 };
-
-jQuery(function($) {
-    $('bookingtype').on('change', function() {
-        var url = $(this).val();
-        if(url) {
-            window.location = url;
-        }
-        return false;
-    });
-});
