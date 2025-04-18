@@ -26,12 +26,9 @@ window.addEventListener('DOMContentLoaded', event => {
         })
     });
 
-    $('#bookingtype').on('change', () => {
-        var url = $(this).val();
-        if(url) {
-            window.location = url;
-        }
-        return false;
+    var bookingType = document.getElementById('bookingtype');
+    bookingType.addEventListener('change', function (e) {
+        console.log(e);
     });
 
     function _toggleMenuIcon() {
