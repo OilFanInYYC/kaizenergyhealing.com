@@ -26,11 +26,6 @@ window.addEventListener('DOMContentLoaded', event => {
         })
     });
 
-    // Open Booking URL
-    var bookingType = document.getElementById('bookingtype');
-    bookingType.addEventListener('change', () => {
-        console.log(this.options[this.selectedIndex]);
-    });
 
     function _toggleMenuIcon() {
         const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
@@ -84,3 +79,13 @@ function fadeIn(el, display) {
         }
     })();
 };
+
+jQuery(function($) {
+    $('bookingtype').on('change', function() {
+        var url = $(this).val();
+        if(url) {
+            window.location = url;
+        }
+        return false;
+    });
+});
