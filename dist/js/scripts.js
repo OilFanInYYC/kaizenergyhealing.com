@@ -32,9 +32,13 @@ window.addEventListener('DOMContentLoaded', event => {
         var bookingInputs = document.querySelectorAll('#booking input');
         if(isValidURL(url)) {
             window.open(url, '_blank');
-            bookingInputs.disabled = true;
+            bookingInputs.forEach((element) => {
+                element.disabled = true;
+            });
         } else {
-            bookingInputs.disabled = false;
+            bookingInputs.forEach((element) => {
+                element.disabled = false;
+            });
         }
     });
 
