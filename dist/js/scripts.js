@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', event => {
         })
     });
 
-    $('bookingtype').on('change', function() {
+    $('#bookingtype').on('change', () => {
         var url = $(this).val();
         if(url) {
             window.location = url;
