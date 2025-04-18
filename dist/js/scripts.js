@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', event => {
     bookingType.addEventListener('change', (e) => {
         var url = e.target.value
         if(isValidURL(url)) {
-            console.log(e.target.value);
+            window.open(url, '_blank');
         }
     });
 
