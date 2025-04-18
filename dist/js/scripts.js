@@ -30,13 +30,20 @@ window.addEventListener('DOMContentLoaded', event => {
     bookingType.addEventListener('change', (e) => {
         var url = e.target.value
         var bookingInputs = document.querySelectorAll('#booking input');
+        var bookingButton = document.querySelectorAll('#booking button');
         if(isValidURL(url)) {
             window.open(url, '_blank');
             bookingInputs.forEach((element) => {
                 element.disabled = true;
             });
+            bookingButton.forEach((element) => {
+                element.disabled = true;
+            });
         } else {
             bookingInputs.forEach((element) => {
+                element.disabled = false;
+            });
+            bookingButton.forEach((element) => {
                 element.disabled = false;
             });
         }
