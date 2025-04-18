@@ -29,8 +29,12 @@ window.addEventListener('DOMContentLoaded', event => {
     var bookingType = document.getElementById('bookingtype');
     bookingType.addEventListener('change', (e) => {
         var url = e.target.value
+        var bookingInputs = document.querySelectorAll('#booking input');
         if(isValidURL(url)) {
             window.open(url, '_blank');
+            bookingInputs.disabled = true;
+        } else {
+            bookingInputs.disabled = false;
         }
     });
 
