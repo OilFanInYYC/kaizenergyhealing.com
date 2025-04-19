@@ -1,0 +1,14 @@
+services:
+  node:
+    image: "kaizenergyhealing:latest"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - /home/node/app/node_modules
+      - ./:/home/node/app
+    ports: # use if it is necessary to expose the container to the host machine
+      - "3000:3000"
+      - "3001:3001"
+    command: "npm start"

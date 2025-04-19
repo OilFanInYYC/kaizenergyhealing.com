@@ -1,5 +1,5 @@
 {
-    "title": "Stylish Portfolio",
+    "title": "Kaizenergy Healing",
     "name": "startbootstrap-stylish-portfolio",
     "version": "6.0.6",
     "scripts": {
@@ -21,7 +21,7 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/stylish-portfolio",
+    "homepage": "https://kaizenergyhealing.com/",
     "bugs": {
         "url": "https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/issues",
         "email": "feedback@startbootstrap.com"
@@ -29,14 +29,15 @@
     "license": "MIT",
     "author": "Start Bootstrap",
     "contributors": [
-        "David Miller (https://davidmiller.io/)"
+        "David Miller (https://davidmiller.io/)",
+        "Zsolt Munoz"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-stylish-portfolio.git"
+        "url": "https://github.com/OilFanInYYC/kaizenergyhealing.com.git"
     },
     "dependencies": {
-        "bootstrap": "5.2.3"
+        "bootstrap": "5.3.5"
     },
     "devDependencies": {
         "autoprefixer": "10.4.14",

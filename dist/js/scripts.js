@@ -1,6 +1,6 @@
 /*!
-* Start Bootstrap - Stylish Portfolio v6.0.6 (https://startbootstrap.com/theme/stylish-portfolio)
-* Copyright 2013-2023 Start Bootstrap
+* Start Bootstrap - Kaizenergy Healing v6.0.6 (https://kaizenergyhealing.com/)
+* Copyright 2013-2025 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
 */
 window.addEventListener('DOMContentLoaded', event => {
@@ -24,29 +24,6 @@ window.addEventListener('DOMContentLoaded', event => {
             menuToggle.classList.remove('active');
             _toggleMenuIcon();
         })
-    });
-
-    var bookingType = document.getElementById('bookingtype');
-    bookingType.addEventListener('change', (e) => {
-        var url = e.target.value
-        var bookingInputs = document.querySelectorAll('#booking input');
-        var bookingButton = document.querySelectorAll('#booking button');
-        if(isValidURL(url)) {
-            window.open(url, '_blank');
-            bookingInputs.forEach((element) => {
-                element.disabled = true;
-            });
-            bookingButton.forEach((element) => {
-                element.disabled = true;
-            });
-        } else {
-            bookingInputs.forEach((element) => {
-                element.disabled = false;
-            });
-            bookingButton.forEach((element) => {
-                element.disabled = false;
-            });
-        }
     });
 
     function _toggleMenuIcon() {
@@ -100,9 +77,4 @@ function fadeIn(el, display) {
             requestAnimationFrame(fade);
         }
     })();
-};
-
-function isValidURL(string) {
-    var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-    return (res !== null)
 };
