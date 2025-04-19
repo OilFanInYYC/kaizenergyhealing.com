@@ -26,6 +26,29 @@ window.addEventListener('DOMContentLoaded', event => {
         })
     });
 
+    var bookingType = document.getElementById('bookingtype');
+    bookingType.addEventListener('change', (e) => {
+        var url = e.target.value
+        var bookingInputs = document.querySelectorAll('#bookingform input');
+        var bookingButton = document.querySelectorAll('#bookingform button');
+        if(isValidURL(url)) {
+            window.open(url, '_blank');
+            bookingInputs.forEach((element) => {
+                element.disabled = true;
+            });
+            bookingButton.forEach((element) => {
+                element.disabled = true;
+            });
+        } else {
+            bookingInputs.forEach((element) => {
+                element.disabled = false;
+            });
+            bookingButton.forEach((element) => {
+                element.disabled = false;
+            });
+        }
+    });
+
     function _toggleMenuIcon() {
         const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
         const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-xmark');
@@ -77,4 +100,9 @@ function fadeIn(el, display) {
             requestAnimationFrame(fade);
         }
     })();
+};
+
+function isValidURL(string) {
+    var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    return (res !== null)
 };
