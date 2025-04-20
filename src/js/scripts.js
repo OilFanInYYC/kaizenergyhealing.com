@@ -44,6 +44,26 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     });
 
+    var bookingForm = document.getElementById('bookingform');
+    bookingForm.addEventListener('submit', (e) => {
+        var submitButton = document.getElementById('bookingsubmit');
+        var bookingInputs = document.querySelectorAll('#bookingform input');
+        var bookingButton = document.querySelectorAll('#bookingform button');
+        var requestBooking = async () => {
+            bookingInputs.forEach((element) => {
+                element.disabled = true;
+            });
+            bookingButton.forEach((element) => {
+                element.disabled = true;
+            });
+            submitButton.innerHTML = 'Requesting...';
+            await sleep(4000);
+            submitButton.innerHTML = 'Submitted!';
+        }
+        requestBooking();
+        e.preventDefault();
+    });
+
     function _toggleMenuIcon() {
         const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
         const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-xmark');
@@ -101,3 +121,7 @@ function isValidURL(string) {
     var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
     return (res !== null)
 };
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
