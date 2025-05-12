@@ -227,7 +227,7 @@ html(lang='en')
             .container.px-4.px-lg-5
                 .content-section-heading.text-center
                     h2.mb-5 Booking
-                form#bookingform(action='http://booking/bookappointment', method='post')
+                form#bookingform(action='http://localhost:5000/bookappointment', method='post')
                     .row.justify-content-center
                         .col-4.mb-3
                             select#bookingtype.form-select
@@ -247,6 +247,7 @@ html(lang='en')
                     .row.justify-content-center.text-center
                         .col-4.mb-3
                             button(type='submit', id='bookingsubmit').mt-3.btn.btn-light Request Session
+                    
 
 
         // Map

@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', event => {
             submitButton.innerHTML = 'Submitted!';
         }
         requestBooking();
-        e.preventDefault();
+        //e.preventDefault();
     });
 
     function _toggleMenuIcon() {
